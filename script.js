@@ -1,11 +1,23 @@
 //Your code goes here
-
+console.log('Script ready');
 // 1. Click the button to display your name
+/* Ways to extend: prompt for user to enter their name in the text input, which then fills inputValue*/
+
 //Selectors
+const btnName = document.querySelector('#btnName');
+const myName = document.querySelector('#myName');
+let inputValue = '';
 
 //Function
+function nameOnClick (name) {
+  inputValue = name;
+  btnName.addEventListener('click', () => { //this is an anon function
+    myName.setAttribute("value", inputValue);
+  });
+}
 
 //Call the event
+nameOnClick('Sarah');
 
 //2. Switch lights on mouseover
 //Selectors
